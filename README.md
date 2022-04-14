@@ -22,7 +22,9 @@ Simple Tutorial to send yourself test Solanas [Here](https://docs.google.com/doc
 ### Basic Program & Client Deploying Smart Contract
 Basic smart contract that displays how many times you access it [Here](https://blog.chain.link/how-to-build-and-deploy-a-solana-smart-contract/)
 
-## Usage
+## Test Concept Block-Garden
+Small Land-leasing contracts verifed via chainlink funded by Solana
+![diagram](diagram.png)
 
 
 
@@ -32,7 +34,7 @@ Basic smart contract that displays how many times you access it [Here](https://b
 * Chainklink [Documentation](https://docs.chain.link/?_ga=2.124500034.993353181.1649598364-607422185.1649598364)
 * Rust [Documentation](https://doc.rust-lang.org/book/title-page.html)
 * [Borsh](https://borsh.io), binary serializer for security-critical projects 
-* [Anchor](https://project-serum.github.io/anchor/getting-started/introduction.html), abstracts away complexities of smart contracts with Solana Sealevel runtime
+* [Anchor](https://project-serum.github.io/anchor/getting-started/introduction.html), abstracts away complexities of smart contracts with Solana Sealevel runtime [install](https://book.anchor-lang.com/chapter_2/installation.html)
 ----- 
 * Hackathon Specific [Documentation/ tutorial / boilerplate](https://docs.chain.link/docs/hackathon-resources/?_ga=2.212595676.993353181.1649598364-607422185.1649598364)
 * The Chainlink Hackathon [Main Site](https://chain.link/hackathon) with calendar and rules
