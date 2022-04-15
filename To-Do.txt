@@ -1,0 +1,41 @@
+
+
+
+
+
+==Basic==
+GitHub Actions Test
+BrownieMix Test
+Determine payoff math
+
+
+==Physical Contract==
+Finish Text Document Draft
+
+Make web Form interface quick flask
+Web form accessible by two people same time?
+	private keys input by individuals on their device
+	agree to all terms by each on form
+	re-confirm all form fields that are ammended
+	Dynamo db to hold web forms temp
+	aws lambda to send to chainlink quick
+Or web3 form ?
+Make key words to cancel contract
+Or send the margin value from yourself to their public to void
+
+
+
+==ChainLink Oracle Init Contract==
+Make chainlink wallet escrow
+
+
+==Solana Smart Contract==
+make smart contract 
+Access escrow wallet for each contract
+Send sol to 2 addresss test
+test state chnage, returning funds + fee test
+
+
+==Chain Link Oracle Watch State==
+while loop (tenant = true and landlord = true)
+if state changes test

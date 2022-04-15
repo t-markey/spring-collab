@@ -2,7 +2,7 @@
 Building THIS which does THAT becuase BLOCKCHAIN using Chainlink/Solana
 
 ## Roadmap Checkpoints
-* 10   APR  Choose Category, Concept and Test Environment (Hardhat, Truffle, or Brownie)
+~~* 10   APR  Choose Category, Concept and Test Environment (Hardhat, Truffle, or Brownie)~~
 * 15   APR  Deadline for test concept up and running (Weather or Other well defined feed)
 ----- 
 * 22   APR  __Offical Opening__ (Finished scope and specifications documents)
@@ -25,8 +25,6 @@ Basic smart contract that displays how many times you access it [Here](https://b
 ## Test Concept Block-Garden
 Small Land-leasing contracts verifed via chainlink funded by Solana
 ![diagram](diagram.png)
-
-
 
 
 ## Useful links
