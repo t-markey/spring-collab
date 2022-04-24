@@ -3,9 +3,9 @@ Building THIS which does THAT becuase BLOCKCHAIN using Chainlink/Solana
 
 ## Roadmap Checkpoints
 ~~* 10   APR  Choose Category, Concept and Test Environment (Hardhat, Truffle, or Brownie)~~
-* 15   APR  Deadline for test concept up and running (Weather or Other well defined feed)
+~~* 15   APR  Idea conceptialized and workflow Diagram , setup collab infrastructure~~
 ----- 
-* 22   APR  __Offical Opening__ (Finished scope and specifications documents)
+~~* 22   APR  __Offical Opening__ (Finished scope and specifications documents)~~
 * 29   APR  TBD - (Basic funcionality with test/synthetic data of interest)
 * 06   MAY  TBD - (Basic funcitonality with live data)
 * 13   MAY	TBD - (Finished with Additional Features)
@@ -25,6 +25,17 @@ Basic smart contract that displays how many times you access it [Here](https://b
 ## Test Concept Block-Garden
 Small Land-leasing contracts verifed via chainlink funded by Solana
 ![diagram](diagram.png)
+
+### Getting up and running
+Installing pipx
+```bash
+brew install pipx
+```
+Installing brownie [Link](https://eth-brownie.readthedocs.io/en/latest/install.html)
+```bash
+pipx install eth-brownie
+```
+
 
 
 ## Useful links
