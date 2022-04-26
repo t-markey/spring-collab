@@ -24,6 +24,10 @@ networks:
     jobId: "29fa9aa13bf1468788b7cc4a500a45b8"
     update_interval: 60
     verify: False
+    cmd_settings:
+      unlock:
+        - 0x7dD23fb7FDDD4B6742AeaDCe42f1B89C70c1A745
+        - 0x359249ef00BEc44950cE30FD3B45beb397F37b73
   kovan:
     vrf_coordinator: "0xdD3782915140c8f3b190B5D67eAc6dc5760C46E9"
     link_token: "0xa36085F69e2889c224210F603D836748e7dC0088"

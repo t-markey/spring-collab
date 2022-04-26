@@ -25,7 +25,7 @@ Small Land-leasing contracts verifed via chainlink funded by Solana
 Sample contract with variables.
 ![diagram](sample_contract_image.png)
 
-### Getting up and running
+### Installation
 Installing pipx
 ```bash
 brew install pipx
@@ -34,6 +34,28 @@ Installing brownie [Link](https://eth-brownie.readthedocs.io/en/latest/install.h
 ```bash
 pipx install eth-brownie
 ```
+Alternative Installation of brownie using pipenv (encountered error brownie using pyhotn 3.1)
+```bash
+pipenv --python 3.8
+pipenv shell
+pipenv install eth-brownie
+```
+Installing ganache-cli
+```bash
+npm install -g ganache-cli
+```
+Adding ganache as a test network
+```bash
+brownie networks add Ethereum ganache host=http://localhost:8545 chainid=1337
+```
+Running base tests (run commands in multiple terminals)
+```bash
+	npx ganache-cli
+	brownie test —network ganache
+```
+
+
+
 
 
 
@@ -53,10 +75,8 @@ pipx install eth-brownie
 ----- 
 Basic smart contract that displays how many times you access it [Here](https://blog.chain.link/how-to-build-and-deploy-a-solana-smart-contract/)
 Simple Tutorial to send yourself test Solanas [Here](https://docs.google.com/document/d/e/2PACX-1vTf4o3Va9TrwsFpYDnTLB8LpIwK1MUh0WIBtajio-Jk78aWlIKF-87BfFdRG2HcfExIq3WIFut_IwdA/pub?_hsmi=208190576&_hsenc=p2ANqtz--PLMIpMAPLBYFfEOVK21XVo822ctPlhBLHs1RawAvQynS-Dzg9rcNDgR0ZKX_3Ek3VKWHo-wWTegOX9-a8Vg6BcHROYA)
+------
 
-
-## Contributing
-Have tests -> Pass all tests
 
 ## Land Leasing Sample contract
 [California Farm Link: Model Short Term Crop Lease Agreement](https://farmlandinfo.org/sample_documents/california-farm-link-model-short-term-crop-lease-agreement/)
