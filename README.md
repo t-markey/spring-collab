@@ -4,10 +4,7 @@
 
 
 ## Roadmap Checkpoints
-* ~~  10   APR  Choose Category, Concept and Test Environment (Hardhat, Truffle, or Brownie)~~
-* ~~  15   APR  Idea conceptialized and workflow Diagram , setup collab infrastructure~~
------ 
-* ~~  22   APR  __Offical Opening__ (Finished scope and specifications documents)~~
+
 * 29   APR  TBD - (Basic funcionality with test/synthetic data of interest)
 * 06   MAY  TBD - (Basic funcitonality with live data)
 * 13   MAY	TBD - (Finished with Additional Features)
@@ -55,10 +52,6 @@ Running base tests (run commands in multiple terminals)
 ```
 
 
-
-
-
-
 ## Useful links
 * Solana [Documentation](https://docs.solana.com)
 * Chainklink [Documentation](https://docs.chain.link/?_ga=2.124500034.993353181.1649598364-607422185.1649598364)
@@ -73,8 +66,8 @@ Running base tests (run commands in multiple terminals)
 * Solana's novel attributes described: e.g. [proof of history](https://medium.com/solana-labs/proof-of-history-a-clock-for-blockchain-cf47a61a9274)
 * Solana version of etherscan : [Solana Explorer](https://explorer.solana.com)
 ----- 
-Basic smart contract that displays how many times you access it [Here](https://blog.chain.link/how-to-build-and-deploy-a-solana-smart-contract/)
-Simple Tutorial to send yourself test Solanas [Here](https://docs.google.com/document/d/e/2PACX-1vTf4o3Va9TrwsFpYDnTLB8LpIwK1MUh0WIBtajio-Jk78aWlIKF-87BfFdRG2HcfExIq3WIFut_IwdA/pub?_hsmi=208190576&_hsenc=p2ANqtz--PLMIpMAPLBYFfEOVK21XVo822ctPlhBLHs1RawAvQynS-Dzg9rcNDgR0ZKX_3Ek3VKWHo-wWTegOX9-a8Vg6BcHROYA)
+* Basic smart contract that displays how many times you access it [Here](https://blog.chain.link/how-to-build-and-deploy-a-solana-smart-contract/)
+* Simple Tutorial to send yourself test Solanas [Here](https://docs.google.com/document/d/e/2PACX-1vTf4o3Va9TrwsFpYDnTLB8LpIwK1MUh0WIBtajio-Jk78aWlIKF-87BfFdRG2HcfExIq3WIFut_IwdA/pub?_hsmi=208190576&_hsenc=p2ANqtz--PLMIpMAPLBYFfEOVK21XVo822ctPlhBLHs1RawAvQynS-Dzg9rcNDgR0ZKX_3Ek3VKWHo-wWTegOX9-a8Vg6BcHROYA)
 ------
 
 
