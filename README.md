@@ -53,12 +53,11 @@ Running base tests (run commands in multiple terminals)
 
 
 ## Useful links
-How to Deply a smart contract [with brownie](https://www.quicknode.com/guides/web3-sdks/how-to-deploy-a-smart-contract-with-brownie)
-Brownie [Documentation](https://eth-brownie.readthedocs.io/en/stable/init.html#creating-an-empty-project)
-Brownie mix with [github actions](https://github.com/brownie-mix/github-actions-mix)
-[Installing](https://eth-brownie.readthedocs.io/en/latest/install.html) brownie
-Smart contract bootcamp: [brownie track](https://chain.link/bootcamp/brownie-setup-instructions)
-Brownie mix with [chainlink](https://github.com/smartcontractkit/chainlink-mix)
+* How to Deply a smart contract [with brownie](https://www.quicknode.com/guides/web3-sdks/how-to-deploy-a-smart-contract-with-brownie)
+* Brownie [Documentation](https://eth-brownie.readthedocs.io/en/stable/init.html#creating-an-empty-project)
+* [Installing](https://eth-brownie.readthedocs.io/en/latest/install.html) brownie
+* Smart contract bootcamp: [brownie track](https://chain.link/bootcamp/brownie-setup-instructions)
+* Brownie mix with [chainlink](https://github.com/smartcontractkit/chainlink-mix)
 
 ----- 
 * Solana [Documentation](https://docs.solana.com)
