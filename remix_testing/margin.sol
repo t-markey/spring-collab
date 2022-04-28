@@ -11,6 +11,10 @@ contract LeaseMargins{
     // True when margin has been funded
     bool lendorMarginOk = false;
     bool lesseeMarginOk = false;
+
+    // Contract voided when either are true (Margin Forfeited by voiding party)
+    bool lendorVoid = false;
+    bool lesseeeVoid = false;
     
     // Global variable for start time of contract
     uint chainStartTime = 0;
@@ -44,8 +48,6 @@ contract LeaseMargins{
         }
       
     }
-
-
 
 
     // ============Posting of Margin and entire rent by Lessee============
@@ -83,8 +85,8 @@ contract LeaseMargins{
     }
 
 
-    // ============Returns Days elapsed since contract elapsed============ 
-    //returns 0 if contract is void
+    // ============Returns Days elapsed since contract elapsed============
+    // Returns 0 if contract is void
     function getDaysInContract() public view returns(uint){
         if (lendorMarginOk && lendorMarginOk){
             return (block.timestamp - chainStartTime )/ 86400;
@@ -93,6 +95,34 @@ contract LeaseMargins{
             return 0;
         }
     }
+
+
+
+    // ***NEEDS WORK
+    // ============End Contract via keyphrase(Or amend later on)============
+    // If a string is sent by either address contract is void
+    // String could be an explanation on why they ended the contract
+    // This would be added to finalized voided contract uploaded to ipfs
+    string keyPhrase;
+    function store(string memory _keyPhrase) public{
+        keyPhrase = _keyPhrase;
+        /*
+        if(SENDER ADDRESS = LENDOR){
+            if (keyPhrase = "get info") // get days until lease ends & other info
+            if (keyPhrase = "cash out") // get current equity in the contract (pay your own gas!)
+            if ("void"in keyPhrase) // voids contract, can optionally include explanation
+        }
+        if(SENDER ADDRESS = LESSEE){
+            if (keyPhrase = "get info") // get days until lease ends & other info
+            if ("void"in keyPhrase) // voids contract, can optionally include explanation
+        }
+        */
+    }
+
+
+
+
+
 
 
 
