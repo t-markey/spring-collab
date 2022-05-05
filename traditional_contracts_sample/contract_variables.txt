@@ -24,6 +24,7 @@ list_approved_cultivars
 total_rent
 days_in_contract
 rent_per_day
+current_day
 
 max_lessor_margin
 max_lessee_margin
