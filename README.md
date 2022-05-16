@@ -5,10 +5,9 @@
 
 ## Roadmap Checkpoints
 
-* 29   APR  TBD - (Basic funcionality with test/synthetic data of interest)
-* 06   MAY  TBD - (Basic funcitonality with live data)
-* 13   MAY	TBD - (Finished with Additional Features)
+* 28   MAY  TBD - (Some Testing)
 * 20   MAY  TBD - (Frontend BS/ Make pretty)
+* 25   MAY  TBD - (Tighten up/ Audit Contract)
 * 27   MAY	__Submission Due__ (Be one with the blockchain)
 ----- 
 * 03  JUN  TBD - (Wrap up / Discuss any Further Developement Plans)
@@ -61,6 +60,8 @@ Running base tests (run commands in multiple terminals)
 * Brownie mix with [chainlink](https://github.com/smartcontractkit/chainlink-mix)
 * Basic python web3 library [tutorial](https://www.youtube.com/watch?v=pZSegEXtgAE)
 * Web3 library [documentation](https://web3py.readthedocs.io/en/stable/quickstart.html#quickstart)
+* Quick Solidity [Reference](https://learnxinyminutes.com/docs/solidity/)
+* Reference on [factory patterns](https://betterprogramming.pub/learn-solidity-the-factory-pattern-75d11c3e7d29)
 ----- 
 * Solana [Documentation](https://docs.solana.com)
 * Chainklink [Documentation](https://docs.chain.link/?_ga=2.124500034.993353181.1649598364-607422185.1649598364)
