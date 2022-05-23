@@ -80,3 +80,5 @@ wallets:
   from_mnemonic: ${MNEMONIC}
 
   # could also do from_mnemonic, and you'd have to change the accounts.add to accounts.from_mnemonic
+
+dotenv: .env
