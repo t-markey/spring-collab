@@ -85,6 +85,7 @@ contract LeaseMargins{
     // Setting contract details 
     // Function setAttributes
     // ***NEEDS BOOL to stop editting during time (helpful for testing as is )
+    // ***NEEDS BOOL to stop as soon as someone post margin
     function setAttributes(uint _minimumMarginLendor, uint _minimumMarginLessee, uint _rentFee, uint _maxDaysContract, uint _harvestDay, uint _testingDays) public returns(address){
         minimumMarginLendor = _minimumMarginLendor;
         minimumMarginLessee = _minimumMarginLessee;
