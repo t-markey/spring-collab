@@ -1,12 +1,29 @@
-from brownie import accounts, MarginFactory
-import os
+from brownie import accounts, MarginFactory, network, config
+
+
+NON_FORKED_LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["hardhat", "development", "ganache"]
+LOCAL_BLOCKCHAIN_ENVIRONMENTS = NON_FORKED_LOCAL_BLOCKCHAIN_ENVIRONMENTS + [
+    "mainnet-fork",
+    "binance-fork",
+    "matic-fork",
+]
+
+
+def get_account(index=None, id=None):
+    if index:
+        return accounts[index]
+    if network.show_active() in LOCAL_BLOCKCHAIN_ENVIRONMENTS:
+        return accounts[0]
+    if id:
+        return accounts.load(id)
+    return accounts.add(config["wallets"]["from_key"])
 
 
 def deploy_the_lease():
 
-    # ============Participants============
+    # ============Participants============jj
 
-    blockchain_lawyer = accounts[0]
+    blockchain_lawyer = get_account()
     # print(account_lendor)
 
     # Two tester accounts
@@ -14,8 +31,8 @@ def deploy_the_lease():
     #account_lessee = accounts.add(os.getenv("PRIVATE_RENTER"))
     # print(account_lendor)
     # print(account_lessee)
-    account_lendor = accounts[1]
-    account_lessee = accounts[2]
+    account_lendor = get_account()
+    account_lessee = get_account()
 
     # ============Init New contract defaults============
 
