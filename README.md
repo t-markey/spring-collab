@@ -1,16 +1,25 @@
 # Chainlink/Solana 2022 Hackathon Submission : Block Garden
 * Building a landleasing agreement ecosystem for smaller suburban plots of land to utilize empty space and increase local food production.
 * The contract requires margin to be posted by each party which is transferred to the other party if one is to void the contract for any reason if they are not satisfied with the arrangement.
+* If either Party voids before a pre-determined Harvest date, bother parties loose their margins and it is donated to a charity.  If the void occurs after the harvest date, the voiding parties margin is transferred to the other participant in the lease.
 
 
 ## Roadmap Checkpoints
-
-* 28   MAY  TBD - (Some Testing)
-* 20   MAY  TBD - (Frontend BS/ Make pretty)
-* 25   MAY  TBD - (Tighten up/ Audit Contract)
-* 27   MAY	__Submission Due__ (Be one with the blockchain)
+The Current state is as follows:
+* Almost all Basic functionality laid out in the design doc have been implemeted and manually tested
+* Automated test estimated to be around 60%
+* Chainklink Keepers Utilization mocked up in archive/remix_testing/margin_with_link.sol
+* Web3 Ui with React Mix has been started and tested on both Ropsten and Rinkeby (Not all functionality is implemented here.  It also is deployed such that one account funds both parties for ease of testing)
 ----- 
 * 03  JUN  TBD - (Wrap up / Discuss any Further Developement Plans)
+
+## Next Steps
+* Finish Unit tests for cashout and void functions
+* Obvious Audit Risks - setAttribute functions, more modifiers
+* Fix factory function working as expected to keep track of all instances of contracts
+* Finish Chainlink Keepers Implementaion
+
+* Web3 stuff - Add buttons for Funding, Voids, Cashouts, Balances, Multiple User End to End testing
 
 
 ## Test Concept Block-Garden
@@ -50,6 +59,23 @@ Running base tests (run commands in multiple terminals)
 	brownie test —network ganache
 ```
 
+Running Tests
+``` bash
+brownie test
+```
+Also to be noted that in the deploy.py , this is being funded automatically with one account.  In remix the work flow is easier to see by funding the margins with seperate accounts.  The setAttributes function is currently used to iterate over days of the contract. getDaysInContract() needs to be uncommented to go live.
+----- 
+
+Running the Web3 client locally from deployment
+You will need to make a .env file to store Infura Node and Private metamask wallet key
+```bash
+	brownie run scripts/deploy.py
+```
+
+```bash
+cd client
+yarn start 
+```
 
 ## Useful links
 * How to Deply a smart contract [with brownie](https://www.quicknode.com/guides/web3-sdks/how-to-deploy-a-smart-contract-with-brownie)
@@ -76,6 +102,8 @@ Running base tests (run commands in multiple terminals)
 ----- 
 * Basic smart contract that displays how many times you access it [Here](https://blog.chain.link/how-to-build-and-deploy-a-solana-smart-contract/)
 * Simple Tutorial to send yourself test Solanas [Here](https://docs.google.com/document/d/e/2PACX-1vTf4o3Va9TrwsFpYDnTLB8LpIwK1MUh0WIBtajio-Jk78aWlIKF-87BfFdRG2HcfExIq3WIFut_IwdA/pub?_hsmi=208190576&_hsenc=p2ANqtz--PLMIpMAPLBYFfEOVK21XVo822ctPlhBLHs1RawAvQynS-Dzg9rcNDgR0ZKX_3Ek3VKWHo-wWTegOX9-a8Vg6BcHROYA)
+* Web3 Setting up Ropsten and Metamask [Here](https://blog.finxter.com/create-web-frontend-using-brownie-react-mix/) 
+* All you need smart contract resource [Learn x in y minutes](https://learnxinyminutes.com/docs/solidity/)
 ------
 
 

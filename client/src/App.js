@@ -22,7 +22,8 @@ class App extends Component {
         balance: null,
         addressToAmountFunded: null,
         initStartDateStr: null,
-        cashoutLendor: null
+        cashoutLendor: null,
+        cashoutLessee: null
     }
 
     componentDidMount = async () => {
@@ -59,8 +60,8 @@ class App extends Component {
     loadInitialContracts = async () => {
         const {accounts} = this.state
         var _chainID = 0;
-        if (this.state.chainid === 3){
-            _chainID = 3;
+        if (this.state.chainid === 4){
+            _chainID = 4;
         }
         if (this.state.chainid === 1337){
             _chainID = "dev"
@@ -72,6 +73,8 @@ class App extends Component {
         }
 
         const daysInContract = await marginFactory.methods.getDaysInContract().call()
+        const cashoutLendor = await marginFactory.methods.viewCashoutLendor().call()
+        const cashoutLessee = await marginFactory.methods.viewMarginRemainsLessee().call()
         console.log(accounts[0])
         const balance = await marginFactory.methods.getBalance(accounts[0]).call()
         console.log(balance)
@@ -81,13 +84,18 @@ class App extends Component {
         const initStartDate = initStartTimestamp
         const initStartDateStr = initStartDate
         console.log(initStartDateStr)
+        const l_test =  await marginFactory.minimumMarginLendor
+        console.log(l_test)
 
         this.setState({
             marginFactory,
             daysInContract,
+            cashoutLendor,
+            cashoutLessee,
             balance,
             addressToAmountFunded,
-            initStartDateStr
+            initStartDateStr,
+            l_test
         })
     }
 
@@ -152,7 +160,8 @@ class App extends Component {
             .on('receipt', async () => {
                 this.setState({
                     daysInContract: await marginFactory.methods.getDaysInContract().call(),
-                    cashoutLendor: await marginFactory.methods.viewCashoutLendor().call()
+                    cashoutLendor: await marginFactory.methods.viewCashoutLendor().call(),
+                    cashoutLessee: await marginFactory.methods.vviewMarginRemainsLessee().call()
                 })
             })
     }
@@ -164,6 +173,7 @@ class App extends Component {
             marginFactory,
             daysInContract,
             cashoutLendor,
+            cashoutLessee,
             marginForLender,
             marginForLessee,
             rentFee,
@@ -173,7 +183,8 @@ class App extends Component {
             transactionHash,
             balance,
             addressToAmountFunded,
-            initStartDateStr
+            initStartDateStr,
+            l_test
         } = this.state
 
         if (!web3) {
@@ -194,15 +205,26 @@ class App extends Component {
                     </p>
                     : null
             }
-            <h1>Margin Factory</h1>
-            <div>The init start date is {initStartDateStr}.</div><br/>
-            <div>The current address to amount funded is {addressToAmountFunded}.</div><br/>
-            <div>The current balance is {balance}.</div><br/>
-            <div>Days in Contract: {daysInContract}.</div><br/>
-            <div>Cash Out Lendor: {cashoutLendor}.</div><br/>
+            <img src= "/images/top_img.jpeg" alt = "Garden"/>
+            <h1>Block - Garden</h1>
+            <p>Rent your extra land out today!<br/>
+            Worried about Pesky Neightbors complaining? or Untidy land renters?<br/>
+            Our novel approach to land-leasing contracts allows you to get out anytime!<br/><br/></p>
+            <img src= "/images/block_garden.jpeg" alt = "Garden Image"/>
+            <h2>Contract Details</h2>
+            <div>The Contract started : {initStartDateStr}</div><br/>
+            <div>Margin Requirement Lendor : {l_test}</div><br/>
+            <div>Margin Requirement Renter : {marginForLender}</div><br/>
+            
+            <div>Your Current Funding :{addressToAmountFunded}</div><br/>
+            <div>(Testing) Whole Contract Balance : {balance}</div><br/>
+            <div>Days in Contract : {daysInContract}</div><br/>
+            <div>Cash Out Lendor : {cashoutLendor}</div><br/>
+            <div>Cash Out Renter : {cashoutLessee}</div><br/>
             <br/>
             <form onSubmit={(e) => this.changeAttributes(e)}>
                 <div>
+                <h2>Set Contract Details</h2>
                     <label>Margin for lender:</label>
                     <input
                         name="marginForLender"
@@ -250,6 +272,7 @@ class App extends Component {
                     </p>
                 </div>
             </form>
+            <img src= "/images/footer_img.jpeg" alt = "Garden Image 2"/>
             <br/>
             {transactionHash ?
                 <div>
