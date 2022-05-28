@@ -1,7 +1,8 @@
 from brownie import accounts, MarginFactory, network, config
 
 
-NON_FORKED_LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["hardhat", "development", "ganache"]
+NON_FORKED_LOCAL_BLOCKCHAIN_ENVIRONMENTS = [
+    "hardhat", "development", "ganache"]
 LOCAL_BLOCKCHAIN_ENVIRONMENTS = NON_FORKED_LOCAL_BLOCKCHAIN_ENVIRONMENTS + [
     "mainnet-fork",
     "binance-fork",
@@ -21,7 +22,7 @@ def get_account(index=None, id=None):
 
 def deploy_the_lease():
 
-    # ============Participants============jj
+    # ============Participants============
 
     blockchain_lawyer = get_account()
     # print(account_lendor)
